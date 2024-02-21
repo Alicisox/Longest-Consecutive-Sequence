@@ -2,6 +2,7 @@
 # Looping using a set is much faster than a normal array
 # n+length is better than create an increment variable
 # For bruteforce O(nlogn) approach, just ignore duplicate completely (do it normally)
+# Searching or checking sth is in a collection, always use a set
 
 class Solution:
     def longestConsecutive_bruteforcev2(self, nums) -> int:
@@ -53,7 +54,7 @@ class Solution:
                     longest = length
         return longest
     
-    def longestConsecutivev2(self, nums) -> int:
+    def longestConsecutive_builtin(self, nums) -> int:
         setnums = set(nums)
         longest = 0
         for n in setnums:
